@@ -1,0 +1,20 @@
+{
+  "instagram": {
+    "enabled": true,
+    "app_id": "VOTRE_APP_ID",
+    "app_secret": "VOTRE_APP_SECRET",
+    "access_token": "VOTRE_ACCESS_TOKEN",
+    "ig_user_id": "VOTRE_IG_USER_ID"
+  },
+  "tiktok": {
+    "enabled": false,
+    "windsor_account_id": "",
+    "windsor_connector": "tiktok_organic"
+  },
+  "youtube": {
+    "enabled": false,
+    "windsor_account_id": "",
+    "windsor_connector": "youtube"
+  },
+  "windsor_api_key": "VOTRE_WINDSOR_API_KEY"
+}

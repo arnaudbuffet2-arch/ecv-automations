@@ -1,0 +1,24 @@
+{
+  "sheet_id": "1OReCrVznxOtrxTzSRqpsKEu0lvR0cwdPoCixFKhgyxs",
+  "blocked_tabs": ["Suivi des revenues annuel", "Répartition des revenus mensuel", "Préparation des factures", "Macro du projet"],
+  "tabs": {
+    "Gestion paiement cours mensuel": {
+      "anonymize": ["prenom", "nom", "moyen_paiement", "montant", "date_cours"],
+      "tokens": {
+        "prenom": "PERSON",
+        "nom": "PERSON",
+        "moyen_paiement": "PAYMENT",
+        "montant": "AMOUNT",
+        "date_cours": "DATE"
+      }
+    },
+    "Formation mensuel": {
+      "anonymize": ["email", "podia_fee", "revenue"],
+      "tokens": {
+        "email": "EMAIL",
+        "podia_fee": "AMOUNT",
+        "revenue": "AMOUNT"
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+# Credentials et secrets
+social_config.json
+*.token.json
+token*.json
+credentials.json
+.env
+ai_config_real.json
+
+# PII et données élèves
+mapping.json
+pending_followups.json
+
+# Logs et état
+*.log
+*_state.json
+last_draft_count.txt
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# OS
+.DS_Store
+desktop.ini
+Thumbs.db
