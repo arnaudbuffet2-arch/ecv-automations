@@ -39,9 +39,9 @@ jobs:
 
       - name: Restore coaching state
         run: |
-          echo "$COACHING_STATE_B64" | base64 -d > emile-coach-vocal/pending_followups.json
+          echo "$COACHING_STATE_GZ_B64" | base64 -d | gunzip > emile-coach-vocal/pending_followups.json
         env:
-          COACHING_STATE_B64: ${{ secrets.COACHING_STATE_B64 }}
+          COACHING_STATE_GZ_B64: ${{ secrets.COACHING_STATE_GZ_B64 }}
 
       - name: Run coaching followup
         run: |
@@ -61,5 +61,4 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_PAT }}
         run: |
-          NEW_STATE=$(base64 -w 0 emile-coach-vocal/pending_followups.json)
-          echo "$NEW_STATE" | gh secret set COACHING_STATE_B64 --repo ${{ github.repository }}
+          gzip -c emile-coach-vocal/pending_followups.json | base64 -w 0 | gh secret set COACHING_STATE_GZ_B64 --repo ${{ github.repository }}
